@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduConnect - Subjects</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #080b2a, #171044, #30105c);
+            color: white;
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 10px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+
+        header p {
+            font-size: 16px;
+            color: #d6d2ff;
+        }
+
+        .subjects-container {
+            max-width: 1100px;
+            margin: 30px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .subject-card {
+            background: rgba(255, 255, 255, 0.10);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 18px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        .subject-card .icon {
+            font-size: 45px;
+            margin-bottom: 18px;
+        }
+
+        .subject-card h2 {
+            font-size: 21px;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+
+        .subject-card p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #e0ddff;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #c8c2f5;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>✦ EduConnect ✦</h1>
+        <p>Explore Your Subjects and Expand Your Knowledge</p>
+    </header>
+
+    <div class="subjects-container">
+
+        <div class="subject-card">
+            <div class="icon">💻</div>
+            <h2>Programming in C</h2>
+            <p>Learn basic programming concepts, variables, loops, functions and problem-solving using C language.</p>
+        </div>
+
+        <div class="subject-card">
+            <div class="icon">☕</div>
+            <h2>Java Programming</h2>
+            <p>Understand object-oriented programming and learn to develop applications using Java.</p>
+        </div>
+
+        <div class="subject-card">
+            <div class="icon">🌐</div>
+            <h2>Web Technology</h2>
+            <p>Learn HTML, CSS and JavaScript to design and develop interactive websites.</p>
+        </div>
+
+        <div class="subject-card">
+            <div class="icon">🐍</div>
+            <h2>Python Programming</h2>
+            <p>Learn Python basics, variables, loops, functions and develop simple programs.</p>
+        </div>
+
+        <div class="subject-card">
+            <div class="icon">📊</div>
+            <h2>Data Structures</h2>
+            <p>Understand arrays, stacks, queues, linked lists and different ways to organize data.</p>
+        </div>
+
+        <div class="subject-card">
+            <div class="icon">🤖</div>
+            <h2>Artificial Intelligence</h2>
+            <p>Explore AI concepts, machine learning and intelligent computer systems.</p>
+        </div>
+
+    </div>
+
+    <footer>
+        © 2026 EduConnect | Learn • Explore • Grow
+    </footer>
+
+</body>
+</html>
