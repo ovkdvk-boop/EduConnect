@@ -1,0 +1,132 @@
+
+/* Main page */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top, #211044, #09051b 75%);
+    color: #f4efff;
+    min-height: 100vh;
+}
+
+/* Main heading */
+h1 {
+    color: #c084fc;
+    text-align: center;
+    margin-top: 100px;
+    font-size: 38px;
+    text-shadow: 0 0 15px #9333ea;
+}
+
+/* Paragraph */
+p {
+    text-align: center;
+    font-size: 18px;
+    color: #b8b0d6;
+}
+
+/* Theme colours for future sections */
+:root {
+    --background: #09051b;
+    --card: #191238;
+    --purple: #9333ea;
+    --cyan: #38d9f5;
+    --pink: #f472b6;
+    --text: #f4efff;
+}
+
+
+
+/* Navigation bar layout */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 6%;
+    background: rgba(20, 12, 48, 0.9);
+    border-bottom: 1px solid #493078;
+    box-shadow: 0 3px 20px rgba(147, 51, 234, 0.2);
+}
+
+/* EduConnect logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #c084fc;
+}
+
+/* Navigation links */
+.navbar nav {
+    display: flex;
+    gap: 28px;
+}
+
+.navbar nav a {
+    color: #e9ddff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #38d9f5;
+    text-shadow: 0 0 10px #38d9f5;
+}
+
+
+/* Mobile responsive navigation */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+        padding: 18px;
+    }
+
+    .navbar nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-top: 65px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+/* Main homepage section */
+.hero {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+/* Introductory text */
+.intro {
+    color: #a99bc9;
+    font-size: 16px;
+    margin-top: 25px;
+    line-height: 1.6;
+}
+
+/* Footer Section */
+.footer {
+    margin-top: 100px;
+    padding: 25px 15px;
+    text-align: center;
+    background: rgba(20, 12, 48, 0.9);
+    border-top: 1px solid #493078;
+}
+
+.footer p {
+    color: #a99bc9;
+    font-size: 13px;
+    margin: 8px;
+}
