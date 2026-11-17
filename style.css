@@ -3,18 +3,37 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: radial-gradient(circle at top, #211044, #09051b 75%);
+    background:
+    radial-gradient(circle at 15% 20%, #7025b5 0%, transparent 40%),
+    radial-gradient(circle at 85% 25%, #164eaa 0%, transparent 45%),
+    linear-gradient(120deg, #17052e, #241052, #091b42, #19052e);
+
+    background-attachment: fixed;
     color: #f4efff;
     min-height: 100vh;
 }
 
-/* Main heading */
+
+/* Main heading - Gradient Style */
+/* Main heading - Gradient Style */
 h1 {
-    color: #c084fc;
-    text-align: center;
-    margin-top: 100px;
+    display: table;
+    margin: 100px auto 0;
+    max-width: 100%;
     font-size: 38px;
-    text-shadow: 0 0 15px #9333ea;
+    text-align: center;
+
+    background: linear-gradient(
+        90deg,
+        #a855f7,
+        #ec4899,
+        #38d9f5
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: none;
 }
 
 /* Paragraph */
@@ -129,4 +148,27 @@ p {
     color: #a99bc9;
     font-size: 13px;
     margin: 8px;
+}
+.letter {
+    display: inline-block;
+    opacity: 0;
+    color: #d8a4ff;
+    text-shadow:
+        0 0 5px #c084fc,
+        0 0 12px #a855f7,
+        0 0 22px #9333ea;
+
+    animation: letterReveal 0.6s ease forwards;
+}
+
+@keyframes letterReveal {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
