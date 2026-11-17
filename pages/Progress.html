@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduConnect Galaxy - Progress</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #080d2b, #24104b, #101c46);
+    color: white;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    color: #a99cff;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #c9c7e8;
+}
+
+nav {
+    text-align: center;
+    padding: 15px;
+    background: #171c43;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+nav a {
+    color: #c5b8ff;
+    text-decoration: none;
+    margin: 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.card {
+    background: rgba(35, 43, 91, 0.85);
+    padding: 22px;
+    margin-bottom: 22px;
+    border-radius: 15px;
+    border: 1px solid #6654a8;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+}
+
+h2 {
+    color: #b8aaff;
+    margin-bottom: 18px;
+}
+
+.overall {
+    text-align: center;
+}
+
+.overall h1 {
+    font-size: 50px;
+    color: #70d7ff;
+    margin: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 14px;
+    background: #10152f;
+    border-radius: 20px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, #6978ff, #42d5f5);
+    border-radius: 20px;
+}
+
+.subject {
+    margin-bottom: 22px;
+}
+
+.subject p {
+    color: #eeeeff;
+}
+
+.assignment {
+    background: #171e48;
+    padding: 15px;
+    margin: 12px 0;
+    border-radius: 10px;
+}
+
+.status {
+    color: #66f0b1;
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    color: #aaa9d2;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+@media(max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav a {
+        margin: 7px;
+        font-size: 14px;
+    }
+
+    .card {
+        padding: 17px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>✦ EduConnect Galaxy ✦</h1>
+    <p>Student Progress Tracker</p>
+</header>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="progress.html">Progress</a>
+    <a href="announcements.html">Announcements</a>
+</nav>
+
+<div class="container">
+
+    <div class="card overall">
+        <h2>Overall Learning Progress</h2>
+        <h1>75%</h1>
+        <p>Keep Learning! You Are Doing Great.</p>
+
+        <div class="progress-bar">
+            <div class="progress" style="width:75%"></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>✓ Completed Assignments</h2>
+
+        <div class="assignment">
+            Mathematics - Algebra
+            <span class="status">Completed ✓</span>
+        </div>
+
+        <div class="assignment">
+            Science - Physics Worksheet
+            <span class="status">Completed ✓</span>
+        </div>
+
+        <div class="assignment">
+            English - Grammar Exercises
+            <span class="status">Completed ✓</span>
+        </div>
+
+        <div class="assignment">
+            Computer Science - HTML
+            <span class="status">Completed ✓</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Subject-wise Progress</h2>
+
+        <div class="subject">
+            <p>Mathematics - 80%</p>
+            <div class="progress-bar">
+                <div class="progress" style="width:80%"></div>
+            </div>
+        </div>
+
+        <div class="subject">
+            <p>Science - 70%</p>
+            <div class="progress-bar">
+                <div class="progress" style="width:70%"></div>
+            </div>
+        </div>
+
+        <div class="subject">
+            <p>English - 90%</p>
+            <div class="progress-bar">
+                <div class="progress" style="width:90%"></div>
+            </div>
+        </div>
+
+        <div class="subject">
+            <p>Computer Science - 60%</p>
+            <div class="progress-bar">
+                <div class="progress" style="width:60%"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 EduConnect Galaxy | All Rights Reserved
+</footer>
+
+</body>
+</html>
