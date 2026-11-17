@@ -206,7 +206,7 @@ h1 {
 
     <div class="signup">
         Don't have an account?
-        <a href="signup.html">Sign Up</a>
+        <a href="#">Sign Up (Coming Soon)</a>
     </div>
 
     <div class="footer">
@@ -224,8 +224,7 @@ function(event) {
     const password = document.getElementById("password").value;
 
     if (email && password) {
-        document.getElementById("message").textContent =
-        "Login interface ready! Connect your authentication system.";
+    window.location.href = "dashboard.html";
     }
 });
 </script>
