@@ -1,1 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EDU Connect Galaxy | Login</title>
 
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:
+        radial-gradient(circle at 20% 20%, #54258c, transparent 40%),
+        radial-gradient(circle at 80% 80%, #153c82, transparent 40%),
+        linear-gradient(135deg, #08051c, #140b35, #050b20);
+    color: white;
+    overflow: hidden;
+}
+
+/* Stars */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image:
+        radial-gradient(2px 2px at 20% 30%, white, transparent),
+        radial-gradient(2px 2px at 70% 20%, white, transparent),
+        radial-gradient(2px 2px at 40% 80%, white, transparent),
+        radial-gradient(2px 2px at 90% 60%, white, transparent),
+        radial-gradient(2px 2px at 10% 90%, white, transparent);
+    background-size: 180px 180px;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 420px;
+    padding: 40px 35px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 22px;
+    box-shadow: 0 0 40px rgba(130, 75, 255, 0.25);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 27px;
+    background: linear-gradient(90deg, #b68cff, #65d9ff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    color: #c7c3df;
+    margin: 12px 0 30px;
+    font-size: 14px;
+}
+
+.input-box {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-box label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #e2dafa;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.08);
+    color: white;
+    outline: none;
+    font-size: 14px;
+}
+
+.input-box input::placeholder {
+    color: #aaa5c5;
+}
+
+.input-box input:focus {
+    border-color: #a77bff;
+    box-shadow: 0 0 12px rgba(167,123,255,0.4);
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin: 5px 0 25px;
+    color: #ccc6e8;
+}
+
+.options a, .signup a {
+    color: #7edfff;
+    text-decoration: none;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #9255ff, #36b9ed);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(120,130,255,0.6);
+}
+
+.signup {
+    margin-top: 25px;
+    font-size: 13px;
+    color: #c7c3df;
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 11px;
+    color: #9992bb;
+}
+
+.message {
+    font-size: 13px;
+    margin-top: 15px;
+    color: #ffb5b5;
+}
+
+@media(max-width: 480px) {
+    .container {
+        padding: 30px 22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="logo">🚀</div>
+
+    <h1>EDU Connect Galaxy</h1>
+
+    <p class="subtitle">
+        Explore Knowledge. Connect. Grow Beyond Limits.
+    </p>
+
+    <form id="loginForm">
+
+        <div class="input-box">
+            <label for="email">Email Address</label>
+            <input type="email" id="email"
+            placeholder="Enter your email" required>
+        </div>
+
+        <div class="input-box">
+            <label for="password">Password</label>
+            <input type="password" id="password"
+            placeholder="Enter your password" required>
+        </div>
+
+        <div class="options">
+            <label>
+                <input type="checkbox"> Remember me
+            </label>
+            <a href="#">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="login-btn">
+            LOGIN →
+        </button>
+
+        <p class="message" id="message"></p>
+
+    </form>
+
+    <div class="signup">
+        Don't have an account?
+        <a href="signup.html">Sign Up</a>
+    </div>
+
+    <div class="footer">
+        © 2026 EDU Connect Galaxy | All Rights Reserved
+    </div>
+
+</div>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit",
+function(event) {
+    event.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    if (email && password) {
+        document.getElementById("message").textContent =
+        "Login interface ready! Connect your authentication system.";
+    }
+});
+</script>
+
+</body>
+</html>
