@@ -1,232 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Computer Expo - Assignments</title>
+    <title>EduConnect - Assignments</title>
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f5f7fb;
-            color: #263447;
-            line-height: 1.6;
-        }
-
-        header {
-            background: linear-gradient(135deg, #172b4d, #2864a5);
+            background: linear-gradient(135deg, #0b102c, #291052);
             color: white;
             text-align: center;
-            padding: 40px 15px;
+            padding: 20px;
+            min-height: 100vh;
         }
 
-        header h1 {
-            font-size: 35px;
-            margin-bottom: 5px;
-        }
-
-        main {
-            width: 90%;
-            max-width: 900px;
-            margin: 25px auto;
-        }
-
-        section {
-            background: white;
-            padding: 22px;
-            margin-bottom: 20px;
-            border-radius: 12px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        h1 {
+            margin-top: 30px;
+            color: #64dfff;
         }
 
         h2 {
-            color: #172b4d;
-            border-bottom: 2px solid #2864a5;
-            padding-bottom: 8px;
+            margin-top: 15px;
         }
 
-        h3 {
-            color: #2864a5;
+        .subtitle {
+            margin-top: 10px;
+            color: #d5d5ee;
         }
 
-        li {
-            margin: 8px 0;
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px auto;
+            max-width: 1100px;
         }
 
-        .sample {
-            background-color: #eef4ff;
+        .card {
+            background: #302a50;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #514777;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .card h2 {
+            color: #64dfff;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            margin: 12px 0;
+            line-height: 1.5;
+        }
+
+        button {
+            background: #4bc5ed;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #64dfff;
+        }
+
+        .details {
+            display: none;
+            margin-top: 15px;
             padding: 15px;
-            border-left: 5px solid #2864a5;
-            border-radius: 8px;
+            background: #211b3d;
+            border-radius: 10px;
         }
 
-        .notice {
-            background-color: #fff8e8;
-            padding: 12px;
-            border-radius: 8px;
+        .details p {
+            font-size: 14px;
+        }
+
+        input {
+            margin-top: 10px;
+            width: 100%;
+            color: white;
         }
 
         footer {
-            background-color: #172b4d;
-            color: white;
-            text-align: center;
-            padding: 18px;
+            margin-top: 30px;
+            padding: 20px;
+            color: #ccccdd;
+            border-top: 1px solid #514777;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Computer Expo</h1>
-    <p>Learn • Create • Explore Technology</p>
-    <h2 style="color:white;">Assignments</h2>
-</header>
-
-<main>
-
-    <!-- Introduction -->
-    <section>
-        <h2>1. Introduction</h2>
-
-        <p>
-            Welcome to the Computer Expo Assignments Section!
-            This page provides sample assignments, questions,
-            submission deadlines and instructions for students.
+    <header>
+        <h1>✦ EduConnect ✦</h1>
+        <h2>Assignments</h2>
+        <p class="subtitle">
+            Explore Your Subjects and Complete Your Assignments
         </p>
-    </section>
+    </header>
 
-    <!-- Sample Assignment -->
-    <section>
-        <h2>2. Sample Assignment</h2>
+    <main>
 
-        <div class="sample">
+        <div class="container">
 
-            <h3>Topic: Artificial Intelligence in Everyday Life</h3>
+            <!-- Assignment 1 -->
+            <div class="card">
+                <h2>Programming in C</h2>
+                <p>Write a C program to find the largest of three numbers.</p>
+                <p><b>Deadline:</b> 24-11-2026</p>
 
-            <p><b>Aim:</b>
-                To understand Artificial Intelligence and its
-                applications in everyday life.
-            </p>
+                <button onclick="showDetails(1)">View Details</button>
 
-            <p>
-                Artificial Intelligence is a technology that
-                enables computers to perform tasks that usually
-                require human intelligence.
-            </p>
+                <div class="details" id="details1">
+                    <p>Submission: PDF or Handwritten</p>
+                    <p>Include Name and Register Number.</p>
+                    <input type="file" accept=".pdf">
+                </div>
+            </div>
 
-            <h3>Include in Your Assignment:</h3>
+            <!-- Assignment 2 -->
+            <div class="card">
+                <h2>Java Programming</h2>
+                <p>Write a Java program using classes and objects.</p>
+                <p><b>Deadline:</b> 25-11-2026</p>
 
-            <ol>
-                <li>Introduction to Artificial Intelligence</li>
-                <li>How AI Works</li>
-                <li>Applications of AI</li>
-                <li>Advantages of AI</li>
-                <li>Limitations of AI</li>
-                <li>Conclusion</li>
-            </ol>
+                <button onclick="showDetails(2)">View Details</button>
 
-        </div>
-    </section>
+                <div class="details" id="details2">
+                    <p>Submission: PDF or Handwritten</p>
+                    <p>Include Name and Register Number.</p>
+                    <input type="file" accept=".pdf">
+                </div>
+            </div>
 
-    <!-- Assignment Questions -->
-    <section>
-        <h2>3. Assignment Questions</h2>
+            <!-- Assignment 3 -->
+            <div class="card">
+                <h2>Web Technology</h2>
+                <p>Create a webpage using HTML and CSS.</p>
+                <p><b>Deadline:</b> 26-11-2026</p>
 
-        <ol>
-            <li>What is Artificial Intelligence?</li>
-            <li>Write any three applications of AI.</li>
-            <li>How is AI used in mobile phones?</li>
-            <li>What are the advantages of AI?</li>
-            <li>Mention one limitation of AI.</li>
-            <li>How is AI useful in education?</li>
-            <li>What did you learn from this assignment?</li>
-        </ol>
-    </section>
+                <button onclick="showDetails(3)">View Details</button>
 
-    <!-- Suggested Topics -->
-    <section>
-        <h2>4. Suggested Computer Expo Topics</h2>
+                <div class="details" id="details3">
+                    <p>Submission: HTML or PDF</p>
+                    <p>Include Name and Register Number.</p>
+                    <input type="file" accept=".html,.pdf">
+                </div>
+            </div>
 
-        <ul>
-            <li>Artificial Intelligence</li>
-            <li>Cybersecurity</li>
-            <li>Web Development</li>
-            <li>Internet of Things (IoT)</li>
-            <li>Cloud Computing</li>
-            <li>Robotics and Automation</li>
-            <li>Green Computing</li>
-        </ul>
-    </section>
+            <!-- Assignment 4 -->
+            <div class="card">
+                <h2>Python Programming</h2>
+                <p>Write a Python program to check even or odd numbers.</p>
+                <p><b>Deadline:</b> 27-11-2026</p>
 
-    <!-- Deadline -->
-    <section>
-        <h2>5. Submission Deadline</h2>
+                <button onclick="showDetails(4)">View Details</button>
 
-        <p><b>Submission Date:</b> To be announced.</p>
+                <div class="details" id="details4">
+                    <p>Submission: PDF or Handwritten</p>
+                    <p>Include Name and Register Number.</p>
+                    <input type="file" accept=".pdf">
+                </div>
+            </div>
 
-        <div class="notice">
-            Students should submit their assignments
-            before the deadline announced by the faculty.
-        </div>
-    </section>
+            <!-- Assignment 5 -->
+            <div class="card">
+                <h2>Data Structures</h2>
+                <p>Explain stack operations with examples.</p>
+                <p><b>Deadline:</b> 28-11-2026</p>
 
-    <!-- Requirements -->
-    <section>
-        <h2>6. Submission Requirements</h2>
+                <button onclick="showDetails(5)">View Details</button>
 
-        <ul>
-            <li>Write the assignment neatly.</li>
-            <li>Include your name and department.</li>
-            <li>Use proper headings.</li>
-            <li>Add relevant diagrams and screenshots.</li>
-            <li>Mention references.</li>
-            <li>Submit in PDF format if requested.</li>
-        </ul>
-    </section>
+                <div class="details" id="details5">
+                    <p>Submission: PDF or Handwritten</p>
+                    <p>Include Name and Register Number.</p>
+                    <input type="file" accept=".pdf">
+                </div>
+            </div>
 
-    <!-- Information -->
-    <section>
-        <h2>7. Assignment Information</h2>
+            <!-- Assignment 6 -->
+            <div class="card">
+                <h2>Artificial Intelligence</h2>
+                <p>Explain the basic concepts of AI.</p>
+                <p><b>Deadline:</b> 29-11-2026</p>
 
-        <p><b>Event:</b> Computer Expo</p>
+                <button onclick="showDetails(6)">View Details</button>
 
-        <p><b>Section:</b> Student Assignments</p>
-
-        <p>
-            <b>Purpose:</b> To improve students' computer
-            knowledge, creativity and technical skills.
-        </p>
-
-        <p>
-            <b>Submission Mode:</b> As instructed by faculty.
-        </p>
-    </section>
-
-    <!-- Conclusion -->
-    <section>
-        <h2>8. Conclusion</h2>
-
-        <p>
-            Computer-related assignments help students explore
-            new technologies, improve problem-solving skills
-            and develop creativity.
-        </p>
-
-        <p>
-            Students are encouraged to complete their assignments
-            carefully and submit them on time.
-        </p>
-    </section>
-
-</main>
-
-<footer>
-    <p>Computer Expo | Assignments Section</p>
-    <p>Member 4</p>
-</footer>
-
-</body>
-</html>
+                <div class="details" id="details6">
+                    <p>Submission: PDF
